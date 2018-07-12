@@ -48,4 +48,11 @@ var paza = schedule.scheduleJob('45 17 * * 7', function(){
   const channel = client.channels.get('460001047495049229');
 channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 });
+
+
+
+var arrests = schedule.scheduleJob('0 9 * * 7', function(){
+  const channel = client.channels.get('460001047495049229');
+channel.send('Please update the screenshots of your arrests @everyone!');
+});
 client.login(process.env.BOT_TOKEN);
