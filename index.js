@@ -17,7 +17,7 @@ var sa = schedule.scheduleJob('45 15 * * 2', function(){
 channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 });
 
-var ps = schedule.scheduleJob('30 5 * * 4', function(){
+var ps = schedule.scheduleJob('33 6 * * 4', function(){
   const channel = client.channels.get('460001047495049229');
 channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 });
