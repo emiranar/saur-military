@@ -51,7 +51,7 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 
 
-var arrests = schedule.scheduleJob('0 9 * * 7', function(){
+var arrests = schedule.scheduleJob('0 18 * * 4', function(){ // olması gereken tarih -> '0 9 * * 7'
   const channel = client.channels.get('460001047495049229');
 channel.send('Please update the screenshots of your arrests @everyone!');
 });
