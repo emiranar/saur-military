@@ -7,44 +7,44 @@ client.on('ready', () => {
 });
 var schedule = require('node-schedule');
 
-var ss = schedule.scheduleJob('45 8 * * 2', function(){
+var ss = schedule.scheduleJob('45 5 * * 2', function(){
   const channel = client.channels.get('460001047495049229');
 channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 });
 
-var sa = schedule.scheduleJob('45 20 * * 2', function(){
+var sa = schedule.scheduleJob('45 15 * * 2', function(){
   const channel = client.channels.get('460001047495049229');
 channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 });
 
-var ps = schedule.scheduleJob('25 9 * * 4', function(){
+var ps = schedule.scheduleJob('30 5 * * 4', function(){
   const channel = client.channels.get('460001047495049229');
 channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 });
 
-var pa = schedule.scheduleJob('45 20 * * 4', function(){
-  const channel = client.channels.get('460001047495049229');
-channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
-});
-
-
-var cs = schedule.scheduleJob('45 8 * * 6', function(){
-  const channel = client.channels.get('460001047495049229');
-channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
-});
-
-var ca = schedule.scheduleJob('45 20 * * 6', function(){
+var pa = schedule.scheduleJob('45 15 * * 4', function(){
   const channel = client.channels.get('460001047495049229');
 channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 });
 
 
-var pazs = schedule.scheduleJob('45 8 * * 7', function(){
+var cs = schedule.scheduleJob('45 5 * * 6', function(){
   const channel = client.channels.get('460001047495049229');
 channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 });
 
-var paza = schedule.scheduleJob('45 20 * * 7', function(){
+var ca = schedule.scheduleJob('45 15 * * 6', function(){
+  const channel = client.channels.get('460001047495049229');
+channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
+});
+
+
+var pazs = schedule.scheduleJob('45 5 * * 7', function(){
+  const channel = client.channels.get('460001047495049229');
+channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
+});
+
+var paza = schedule.scheduleJob('45 15 * * 7', function(){
   const channel = client.channels.get('460001047495049229');
 channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 });
