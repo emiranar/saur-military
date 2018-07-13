@@ -59,7 +59,7 @@ channelarr.send('Please update the screenshots of your arrests @everyone!');
 
 var recday = 5; 
 
-var recs = schedule.scheduleJob('38 19 * * 5', function(){
+var recs = schedule.scheduleJob('44 19 * * 5', function(){
   const channelrec = client.channels.get('460001047495049229');
 channelrec.send('It is the recruitment day  ' +recday+ '  @everyone!');
 
@@ -71,6 +71,10 @@ else{
 }
 
 channelrec.send('It is the recruitment day  ' +recday+ '  @everyone!');
+});
+
+var test = schedule.scheduleJob('45 19 * * 5', function(){
+channelarr.send('It is the recruitment day  ' +recday+ '  @everyone!');
 });
 
 
