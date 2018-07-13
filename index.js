@@ -51,8 +51,18 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 
 
+
 var arrests = schedule.scheduleJob('0 9 * * 7', function(){
   const channelarr = client.channels.get('460001047495049229');
 channelarr.send('Please update the screenshots of your arrests @everyone!');
 });
+
+var recday = 5; // saturday
+
+var arrests = schedule.scheduleJob('55 18 * * recday', function(){
+  const channelarr = client.channels.get('460001047495049229');
+channelarr.send('It is the recruitment day @everyone!');
+});
+
+
 client.login(process.env.BOT_TOKEN);
