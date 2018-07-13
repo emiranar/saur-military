@@ -61,9 +61,9 @@ channelarr.send('Please update the screenshots of your arrests @everyone!');
 
 
 
-var recday = 5; 
+var recday = 6; 
 
-var recs = schedule.scheduleJob('0 9 * * 6', function(){
+var recs = schedule.scheduleJob('0 9 * * '+recday+'', function(){
   const channelrec = client.channels.get('460001047495049229');
 channelrec.send('It is the recruitment day @everyone!');
 
