@@ -57,11 +57,15 @@ var arrests = schedule.scheduleJob('0 9 * * 7', function(){
 channelarr.send('Please update the screenshots of your arrests @everyone!');
 });
 
+
+
+
+
 var recday = 5; 
 
-var recs = schedule.scheduleJob('48 19 * * 5', function(){
+var recs = schedule.scheduleJob('0 9 * * 6', function(){
   const channelrec = client.channels.get('460001047495049229');
-channelrec.send('It is the recruitment day  ' +recday+ '  @everyone!');
+channelrec.send('It is the recruitment day @everyone!');
 
 if (recday == 5) {
   recday += 1;
@@ -69,13 +73,8 @@ if (recday == 5) {
 else{
   recday -=1;
 }
-
-channelrec.send('It is the recruitment day  ' +recday+ '  @everyone!');
 });
 
-var test = schedule.scheduleJob('52 19 * * 5', function(){
-channelarr.send('It is the recruitment day  ' +recday+ '  @everyone!');
-});
 
 
 client.login(process.env.BOT_TOKEN);
