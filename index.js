@@ -7,6 +7,12 @@ client.on('ready', () => {
 });
 var schedule = require('node-schedule');
 
+var stayawake = schedule.scheduleJob('*/5 * * * *', function(){
+  console.log('I am awake, sir!');
+});
+
+
+
 var ss = schedule.scheduleJob('45 5 * * 2', function(){
   const channel = client.channels.get('460001047495049229');
 channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
