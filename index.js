@@ -28,7 +28,7 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 });
 
 
-var cs = schedule.scheduleJob('30 13 * * 6', function(){
+var cs = schedule.scheduleJob('45 5 * * 6', function(){
   const channel = client.channels.get('460001047495049229');
 channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 });
@@ -55,24 +55,6 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 var arrests = schedule.scheduleJob('0 9 * * 7', function(){
   const channelarr = client.channels.get('460001047495049229');
 channelarr.send('Please update the screenshots of your arrests @everyone!');
-});
-
-
-
-
-
-var recday = 6; 
-
-var recs = schedule.scheduleJob('0 9 * * '+recday+'', function(){
-  const channelrec = client.channels.get('460001047495049229');
-channelrec.send('It is the recruitment day @everyone!');
-
-if (recday == 5) {
-  recday += 1;
-}
-else{
-  recday -=1;
-}
 });
 
 
