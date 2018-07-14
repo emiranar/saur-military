@@ -8,6 +8,8 @@ client.on('ready', () => {
 var schedule = require('node-schedule');
 
 var stayawake = schedule.scheduleJob('*/5 * * * *', function(){
+  const channel = client.channels.get('460001047495049229');
+  channel.send('I am awake, sir!');
   console.log('I am awake, sir!');
 });
 
