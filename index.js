@@ -38,6 +38,11 @@ var ca = schedule.scheduleJob('45 17 * * 6', function(){
 channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 });
 
+var cade = schedule.scheduleJob('10 14 * * 6', function(){
+  const channel = client.channels.get('460001047495049229');
+channel.send('');
+});
+
 
 var pazs = schedule.scheduleJob('45 5 * * 7', function(){
   const channel = client.channels.get('460001047495049229');
