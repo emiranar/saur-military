@@ -4,6 +4,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
 	console.log('I am ready for duty, sir!');
 	client.user.setActivity('with Aerion');
+	console.log(process.env.RCT_DAY);
 });
 var schedule = require('node-schedule');
 
@@ -137,7 +138,7 @@ var arrests = schedule.scheduleJob('0 9 * * 7', function(){
 
 
 
-var recs = schedule.scheduleJob('23 8 * * '+ process.env.RCT_DAY +'', function(){
+var recs = schedule.scheduleJob('28 8 * * '+ process.env.RCT_DAY +'', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('It\'s the recruitment day @everyone!');
   
