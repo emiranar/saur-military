@@ -5,9 +5,6 @@ const config = require('./config.json');
 client.on('ready', () => {
 	console.log('I am ready for duty, sir!');
 	client.user.setActivity('with Aerion');
-	
-	const channelawake = client.channels.get('460001047495049229');
-	channelawake.send(config.recday);
 });
 var schedule = require('node-schedule');
 
@@ -142,11 +139,9 @@ var arrests = schedule.scheduleJob('0 9 * * 7', function(){
 
 
 
-var rec = schedule.scheduleJob('10 11 * * '+ config.recday +'', function(){
+var rec = schedule.scheduleJob('0 9 * * '+ config.recday +'', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('It\'s the recruitment day @everyone!');
-  config.recday = '6';
-  channelawake.send(config.recday);
 });
 
 
