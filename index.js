@@ -138,7 +138,7 @@ var arrests = schedule.scheduleJob('0 9 * * 7', function(){
 
 var recday = process.env.RCT_DAY;
 
-var recs = schedule.scheduleJob('9 8 * * '+ recday +'', function(){
+var recs = schedule.scheduleJob('13 8 * * '+ recday +'', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('It\'s the recruitment day @everyone!');
 });
