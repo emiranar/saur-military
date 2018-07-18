@@ -139,7 +139,7 @@ var arrests = schedule.scheduleJob('0 9 * * 7', function(){
 
 
 
-var recwakeup = schedule.scheduleJob('0 8 * * '+ process.env.BOT_TOKEN +', function(){
+var recwakeup = schedule.scheduleJob('0 8 * * '+ process.env.BOT_TOKEN +'', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('It\'s the recruitment day @everyone!');
 });
