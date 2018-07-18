@@ -7,18 +7,6 @@ client.on('ready', () => {
 });
 var schedule = require('node-schedule');
 
-var stayawake = schedule.scheduleJob('*/5 * * * *', function(){
-  const channelawake = client.channels.get('460001047495049229');
-  channelawake.send('I am awake, sir!');
-  console.log('I am awake, sir!');
-});
-
-
-
-
-
-
-
 var sswakeup = schedule.scheduleJob('30 5 * * 2', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('I am awake, sir!');
