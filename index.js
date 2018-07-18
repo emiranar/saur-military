@@ -22,7 +22,7 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 
 
-var sawakeup = schedule.scheduleJob('45 17 * * 2', function(){
+var sawakeup = schedule.scheduleJob('30 17 * * 2', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('I am awake, sir!');
   console.log('I am awake, sir!');
@@ -37,7 +37,7 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 
 
-var pswakeup = schedule.scheduleJob('45 5 * * 4', function(){
+var pswakeup = schedule.scheduleJob('30 5 * * 4', function(){
     const channelawake = client.channels.get('460001047495049229');
   channelawake.send('I am awake, sir!');
   console.log('I am awake, sir!');
@@ -50,7 +50,7 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 
 
-var pawakeup = schedule.scheduleJob('45 17 * * 4', function(){
+var pawakeup = schedule.scheduleJob('30 17 * * 4', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('I am awake, sir!');
   console.log('I am awake, sir!');
@@ -64,7 +64,7 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 
 
-var cswakeup = schedule.scheduleJob('45 5 * * 6', function(){
+var cswakeup = schedule.scheduleJob('30 5 * * 6', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('I am awake, sir!');
   console.log('I am awake, sir!');
@@ -78,7 +78,7 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 
 
-var cawakeup = schedule.scheduleJob('45 17 * * 6', function(){
+var cawakeup = schedule.scheduleJob('30 17 * * 6', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('I am awake, sir!');
   console.log('I am awake, sir!');
@@ -93,7 +93,7 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 
 
-var pazswakeup = schedule.scheduleJob('45 5 * * 7', function(){
+var pazswakeup = schedule.scheduleJob('30 5 * * 7', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('I am awake, sir!');
   console.log('I am awake, sir!');
@@ -107,7 +107,7 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 
 
-var pazawakeup = schedule.scheduleJob('45 17 * * 7', function(){
+var pazawakeup = schedule.scheduleJob('30 17 * * 7', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('I am awake, sir!');
   console.log('I am awake, sir!');
@@ -123,7 +123,7 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 
 
-var arrestswakeup = schedule.scheduleJob('0 9 * * 7', function(){
+var arrestswakeup = schedule.scheduleJob('45 8 * * 7', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('I am awake, sir!');
   console.log('I am awake, sir!');
