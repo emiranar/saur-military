@@ -4,6 +4,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
 	console.log('I am ready for duty, sir!');
 	client.user.setActivity('with Aerion');
+	console.log('BOT TOKEN:', process.env.BOT_TOKEN);
 });
 var schedule = require('node-schedule');
 
