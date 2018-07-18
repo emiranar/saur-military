@@ -4,6 +4,9 @@ const client = new Discord.Client();
 client.on('ready', () => {
 	console.log('I am ready for duty, sir!');
 	client.user.setActivity('with Aerion');
+	
+	const channelawake = client.channels.get('460001047495049229');
+	channelawake.send(process.env.REC_DAY);
 });
 var schedule = require('node-schedule');
 
@@ -11,7 +14,7 @@ var sswakeup = schedule.scheduleJob('30 5 * * 2', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('I am awake, sir!');
   console.log('I am awake, sir!');
-	channelawake.send(process.env.REC_DAY);
+	
 });
 
 var ss = schedule.scheduleJob('45 5 * * 2', function(){
