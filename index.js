@@ -2,14 +2,14 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 client.on('ready', () => {
-    console.log('I am ready for duty, sir!');
+	console.log('I am ready for duty, sir!');
 	client.user.setActivity('with Aerion');
 });
 var schedule = require('node-schedule');
 
 var stayawake = schedule.scheduleJob('*/5 * * * *', function(){
-  const channel = client.channels.get('460001047495049229');
-  channel.send('I am awake, sir!');
+  const channelawake = client.channels.get('460001047495049229');
+  channelawake.send('I am awake, sir!');
   console.log('I am awake, sir!');
 });
 
@@ -62,7 +62,7 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 var arrests = schedule.scheduleJob('0 9 * * 7', function(){
   const channelarr = client.channels.get('454180113974689813');
-channelarr.send('Please update the screenshots of your arrests @everyone!');
+  channelarr.send('Please update the screenshots of your arrests @everyone!');
 });
 
 
