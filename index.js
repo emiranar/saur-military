@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const config = require('./config.json');
 
 client.on('ready', () => {
 	console.log('I am ready for duty, sir!');
@@ -141,7 +142,7 @@ var arrests = schedule.scheduleJob('0 9 * * 7', function(){
 
 
 
-var rec = schedule.scheduleJob('50 10 * * '+ process.env.REC_DAY +'', function(){
+var rec = schedule.scheduleJob('7 11 * * '+ config.recday +'', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('It\'s the recruitment day @everyone!');
   process.env.REC_DAY = '6';
