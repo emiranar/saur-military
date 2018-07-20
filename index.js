@@ -139,8 +139,16 @@ var arrests = schedule.scheduleJob('0 9 * * 7', function(){
 
 
 
-var rec = schedule.scheduleJob('0 9 * * '+ config.recday +'', function(){
+
+
+var recawake = schedule.scheduleJob('45 8 * * '+ config.recday +'', function(){
   const channelawake = client.channels.get('460001047495049229');
+  channelawake.send('I am awake, sir!');
+  console.log('I am awake, sir!');
+});
+
+var rec = schedule.scheduleJob('0 9 * * '+ config.recday +'', function(){
+  const channelawake = client.channels.get('460001047495049229');  // BURASI DEĞİŞECEKKKK!! (DEĞİŞKEN ADI DA)
   channelawake.send('It\'s the recruitment day @everyone!');
 });
 
