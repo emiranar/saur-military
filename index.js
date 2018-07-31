@@ -147,7 +147,7 @@ var recawake = schedule.scheduleJob('45 8 * * '+ config.recday +'', function(){
   console.log('I am awake, sir!');
 });
 
-var rec = schedule.scheduleJob('7 10 * * '+ config.recday +'', function(){
+var rec = schedule.scheduleJob('9 10 * * '+ config.recday +'', function(){
   const channelrec = client.channels.get('391219156391034890');
   channelrec.send('It\'s the recruitment day @everyone! *-testing-*');
 });
