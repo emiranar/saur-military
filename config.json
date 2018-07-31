@@ -1,4 +1,5 @@
 
 {
-    "recday": "6" // SATURDAY -- SET FOR 04.08.2018
+    "_comment": "SATURDAY -- SET FOR 04.08.2018",
+    "recday": "6" 
 }
