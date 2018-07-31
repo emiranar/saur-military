@@ -160,7 +160,7 @@ var rec = schedule.scheduleJob('0 5 * * '+ config.recday +'', function(){
 });
 
 
-var recawake = schedule.scheduleJob('45 4 * * 1', function(){
+var recmondayawake = schedule.scheduleJob('45 4 * * 1', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('I am awake, sir!');
   console.log('I am awake, sir!');
