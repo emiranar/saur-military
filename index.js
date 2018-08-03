@@ -187,11 +187,11 @@ var recmonday = schedule.scheduleJob('0 5 * * 1', function(){
 
 
 
-var weeklyevent = schedule.scheduleJob('18 12 * * 5', function(){
+var weeklyevent = schedule.scheduleJob('27 12 * * 5', function(){
 
 
 var XLSX = require('xlsx');
-var workbook = XLSX.readFile('Week10.xlsx');
+var workbook = XLSX.readFile('evals.xlsx');
 var sheet_name_list = workbook.SheetNames;
 sheet_name_list.forEach(function(y) {
     var worksheet = workbook.Sheets[y];
