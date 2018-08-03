@@ -194,4 +194,98 @@ var recmonday = schedule.scheduleJob('0 5 * * 1', function(){
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+var weeklyevent = schedule.scheduleJob('21 10 * * 5', function(){
+
+
+var XLSX = require('xlsx');
+var workbook = XLSX.readFile('Week10.xlsx');
+var sheet_name_list = workbook.SheetNames;
+sheet_name_list.forEach(function(y) {
+    var worksheet = workbook.Sheets[y];
+    var headers = {};
+    var data = [];
+    for(z in worksheet) {
+        if(z[0] === '!') continue;
+        //parse out the column, row, and value
+        var tt = 0;
+        for (var i = 0; i < z.length; i++) {
+            if (!isNaN(z[i])) {
+                tt = i;
+                break;
+            }
+        };
+        var col = z.substring(0,tt);
+        var row = parseInt(z.substring(tt));
+        var value = worksheet[z].v;
+
+        //store header names
+        if(row == 1 && value) {
+            headers[col] = value;
+            continue;
+        }
+
+        if(!data[row]) data[row]={};
+        data[row][headers[col]] = value;
+    }
+    //drop those first two rows which are empty
+    data.shift();
+    data.shift();
+    
+    var max=0;
+
+ //   console.log(data);
+
+for(var i = 1; i <= data.length -1;i++) {
+     console.log(data[i].SOLDIER);
+    console.log(data[i].RANK);
+    console.log("POINTS: " + data[i].POINTS);
+    console.log("----------------");
+
+    if (data[i].POINTS > max) {
+        max = data[i].POINTS;
+        var maxplayer = data[i].SOLDIER;
+    }
+}
+    console.log("SOLDIER WITH THE MOST POINTS: "+maxplayer);
+  channelawake.send("SOLDIER WITH THE MOST POINTS: "+maxplayer);
+
+   
+
+   
+
+
+// SORUN ŞU Kİ: DATA BİR ARRAY OLDUGU İÇİN BAŞINDA VE SONUNDAKİ [] İŞARETLERİ JSON'U OKUMAMIZI ENGELLİYOR.
+
+
+    var jsonfile = require('jsonfile');
+ 
+var file = 'data.json';
+var obj = data;
+ 
+jsonfile.writeFile(file, obj, function (err) {
+ // console.error(err)
+});
+
+
+});
+
+
+
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
