@@ -187,7 +187,7 @@ var recmonday = schedule.scheduleJob('0 5 * * 1', function(){
 
 
 
-var weeklyevent = schedule.scheduleJob('32 10 * * 5', function(){
+var weeklyevent = schedule.scheduleJob('35 10 * * 5', function(){
 
 
 var XLSX = require('xlsx');
@@ -248,7 +248,6 @@ for(var i = 1; i <= data.length -1;i++) {
    
 
 
-// SORUN ŞU Kİ: DATA BİR ARRAY OLDUGU İÇİN BAŞINDA VE SONUNDAKİ [] İŞARETLERİ JSON'U OKUMAMIZI ENGELLİYOR.
 
 
     var jsonfile = require('jsonfile');
