@@ -276,10 +276,10 @@ var obj = data;
  
 jsonfile.writeFile(file, obj, function (err) {
  // console.error(err)
-});
+})
 
 
-});
+})
 
 
 
