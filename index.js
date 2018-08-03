@@ -7,26 +7,7 @@ const { SOLDIER, RANK, POINTS } = require('./data.json');
 client.on('ready', () => {
 	console.log('I am ready for duty, sir!');
 	client.user.setActivity('with Aerion');
-	
-	
-	
-
-
-	
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 var schedule = require('node-schedule');
 
@@ -206,7 +187,7 @@ var recmonday = schedule.scheduleJob('0 5 * * 1', function(){
 
 
 
-var weeklyevent = schedule.scheduleJob('21 10 * * 5', function(){
+var weeklyevent = schedule.scheduleJob('32 10 * * 5', function(){
 
 
 var XLSX = require('xlsx');
@@ -258,6 +239,7 @@ for(var i = 1; i <= data.length -1;i++) {
         var maxplayer = data[i].SOLDIER;
     }
 }
+	const channelawake = client.channels.get('460001047495049229');
     console.log("SOLDIER WITH THE MOST POINTS: "+maxplayer);
   channelawake.send("SOLDIER WITH THE MOST POINTS: "+maxplayer);
 
@@ -276,11 +258,11 @@ var obj = data;
  
 jsonfile.writeFile(file, obj, function (err) {
  // console.error(err)
-})
+});
 
 
-})
-
+});
+});
 
 
 
