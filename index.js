@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require('./config.json');
-const { SOLDIER, RANK, POINTS } = require('./data.json');
+const { SOLDIER, RANK, POINTS, NAME } = require('./data.json');
 
 
 client.on('ready', () => {
@@ -151,25 +151,25 @@ var arrests = schedule.scheduleJob('0 9 * * 7', function(){
 
 
 
-var recawake = schedule.scheduleJob('45 4 * * '+ config.recday +'', function(){
+var recawake = schedule.scheduleJob('15 0 * * '+ config.recday +'', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('I am awake, sir!');
   console.log('I am awake, sir!');
 });
 
-var rec = schedule.scheduleJob('0 5 * * '+ config.recday +'', function(){
+var rec = schedule.scheduleJob('30 0 * * '+ config.recday +'', function(){
   const channelrec = client.channels.get('391219156391034890');
   channelrec.send('Today is recruitment day @everyone Wake up fellas!');
 });
 
 
-var recmondayawake = schedule.scheduleJob('45 4 * * 1', function(){
+var recmondayawake = schedule.scheduleJob('15 0 * * 1', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('I am awake, sir!');
   console.log('I am awake, sir!');
 });
 
-var recmonday = schedule.scheduleJob('0 5 * * 1', function(){
+var recmonday = schedule.scheduleJob('30 0 * * 1', function(){
   const channelrec = client.channels.get('391219156391034890');
   channelrec.send('Today is recruitment day @everyone Wake up fellas!');
 });
