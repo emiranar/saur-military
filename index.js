@@ -422,8 +422,7 @@ console.log("NEXT WEEKS DATE IS: " + res);
    
 
 
-});
-});
+
 
 });
 
