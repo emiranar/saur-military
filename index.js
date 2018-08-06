@@ -187,7 +187,7 @@ var recmonday = schedule.scheduleJob('30 0 * * 1', function(){
 
 
 
-var weeklyevent = schedule.scheduleJob('42 6 * * 1', function(){
+var weeklyevent = schedule.scheduleJob('55 6 * * 1', function(){
 
 
 var XLSX = require('XLSX');
