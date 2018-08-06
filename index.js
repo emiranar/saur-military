@@ -58,7 +58,7 @@ sheet_name_list.forEach(function(y) {
         var maxplayer = data[l].NAME;
     }
 }
-});
+
 });
 
 var schedule = require('node-schedule');
@@ -425,7 +425,7 @@ console.log("NEXT WEEKS DATE IS: " + res);
 });
 });
 
-
+});
 
 
 
