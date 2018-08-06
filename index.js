@@ -48,6 +48,7 @@ sheet_name_list.forEach(function(y) {
     data.shift();
 }
 	
+	var max = 0;
 	
 	for(var l = 0; l <= data.length -1;l++) {
      console.log(data[l].NAME);
@@ -56,7 +57,7 @@ sheet_name_list.forEach(function(y) {
     console.log("----------------");
 		
     if (data[l].POINTS > max) {
-        var max = data[l].POINTS;
+        max = data[l].POINTS;
         var maxplayer = data[l].NAME;
     }
 }
@@ -286,7 +287,7 @@ for (var b = 0; b < 87; b++) {
   
 
     
-    var max=0;
+   
 
    console.log(data);
 
