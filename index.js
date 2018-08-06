@@ -60,6 +60,9 @@ sheet_name_list.forEach(function(y) {
         var maxplayer = data[l].NAME;
     }
 }
+	
+		client.user.setActivity('with ' + maxplayer);
+
 
 });
 
