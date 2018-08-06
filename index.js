@@ -59,6 +59,7 @@ sheet_name_list.forEach(function(y) {
     }
 }
 });
+});
 
 var schedule = require('node-schedule');
 
