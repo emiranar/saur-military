@@ -6,7 +6,6 @@ const { SOLDIER, RANK, POINTS, NAME } = require('./data.json');
 
 client.on('ready', () => {
 	console.log('I am ready for duty, sir!');
-	client.user.setActivity('with Aerion');
 });
 
 var schedule = require('node-schedule');
@@ -346,6 +345,7 @@ console.log("NEXT WEEKS DATE IS: " + res);
        
         console.log("THIS WEEK'S WINNERS ARE: " + firstpl + " " + secondpl + " " + thirdpl);
 
+	client.user.setActivity('with ' + firstpl);
 	
 	
        channelwe.send("Hey soldiers, we are proud to announce the winners of this week!\nCongratulations to; \n**" + firstpl + "\n" + secondpl + "\n" + thirdpl + "**");
