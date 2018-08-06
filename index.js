@@ -186,7 +186,7 @@ var recmonday = schedule.scheduleJob('30 0 * * 1', function(){
 
 
 
-var weeklyevent = schedule.scheduleJob('0 10 * * 1', function(){ // 1 OLAN DEĞER PAZAR (0 VEYA 7) YAPILACAK
+var weeklyevent = schedule.scheduleJob('0 10 * * 7', function(){ 
 
 
 var XLSX = require('xlsx');
@@ -282,7 +282,7 @@ today = mm + '/' + dd + '/' + yyyy;
 
 
 var firstDay = new Date(today);
-var nextWeek = new Date(firstDay.getTime() + 6 * 24 * 60 * 60 * 1000); // 6 OLAN DEĞER TEKRAR 7 YAPILACAK
+var nextWeek = new Date(firstDay.getTime() + 7 * 24 * 60 * 60 * 1000); 
 var nextWeekString = JSON.stringify(nextWeek);
 var res = nextWeekString.slice(1, -15);
 
@@ -370,7 +370,7 @@ for(var i = 1; i <= data.length -1;i++) {
     console.log(data[i].RANK);
     console.log("POINTS: " + data[i].POINTS);
     console.log("----------------");
-
+ // GEREKIRSE BU BLOCK CLIENT.ONREADY'NİN İÇİNE ALINACAK
     if (data[i].POINTS > max) {
         max = data[i].POINTS;
         var maxplayer = data[i].NAME;
