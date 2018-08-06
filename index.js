@@ -187,7 +187,7 @@ var recmonday = schedule.scheduleJob('30 0 * * 1', function(){
 
 
 
-var weeklyevent = schedule.scheduleJob('10 7 * * 1', function(){
+var weeklyevent = schedule.scheduleJob('38 8 * * 1', function(){
 
 
 var XLSX = require('xlsx');
@@ -348,7 +348,7 @@ console.log("NEXT WEEKS DATE IS: " + res);
 
        channelawake2.send("Hey soldiers, we are proud to announce the winners of this week!\nCongratulations to; \n**" + firstpl + "\n" + secondpl + "\n" + thirdpl + "**");
 
-       channelawake2.send("The next date of choosing the 3 soldiers with best overall previous week activity is: **" + res + "** \nNicknames will be displayed down below.");
+       channelawake2.send("The next date of choosing the 3 soldiers with best overall previous week activity is: \n**" + res + "** \nNicknames will be displayed down below.");
       
 
 		// CHANNELLAR DEĞİŞECEK
