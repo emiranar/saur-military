@@ -187,7 +187,7 @@ var recmonday = schedule.scheduleJob('30 0 * * 1', function(){
 
 
 
-var weeklyevent = schedule.scheduleJob('0 7 * * 1', function(){
+var weeklyevent = schedule.scheduleJob('10 7 * * 1', function(){
 
 
 var XLSX = require('xlsx');
@@ -283,7 +283,7 @@ today = mm + '/' + dd + '/' + yyyy;
 
 
 var firstDay = new Date(today);
-var nextWeek = new Date(firstDay.getTime() + 8 * 24 * 60 * 60 * 1000);
+var nextWeek = new Date(firstDay.getTime() + 7 * 24 * 60 * 60 * 1000);
 var nextWeekString = JSON.stringify(nextWeek);
 var res = nextWeekString.slice(1, -15);
 
