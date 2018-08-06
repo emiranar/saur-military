@@ -187,10 +187,10 @@ var recmonday = schedule.scheduleJob('30 0 * * 1', function(){
 
 
 
-var weeklyevent = schedule.scheduleJob('31 12 * * 5', function(){
+var weeklyevent = schedule.scheduleJob('42 6 * * 1', function(){
 
 
-var XLSX = require('xlsx');
+var XLSX = require('XLSX');
 var workbook = XLSX.readFile('evals.xlsx');
 var sheet_name_list = workbook.SheetNames;
 sheet_name_list.forEach(function(y) {
@@ -212,7 +212,7 @@ sheet_name_list.forEach(function(y) {
         var value = worksheet[z].v;
 
         //store header names
-        if(row == 1 && value) {
+        if(row == 86 && value) {
             headers[col] = value;
             continue;
         }
@@ -221,31 +221,21 @@ sheet_name_list.forEach(function(y) {
         data[row][headers[col]] = value;
     }
     //drop those first two rows which are empty
+for (var b = 0; b < 87; b++) {
     data.shift();
-    data.shift();
+}
+    
+
+  
+
     
     var max=0;
 
- //   console.log(data);
+   console.log(data);
 
-for(var i = 1; i <= data.length -1;i++) {
-     console.log(data[i].SOLDIER);
-    console.log(data[i].RANK);
-    console.log("POINTS: " + data[i].POINTS);
-    console.log("----------------");
 
-    if (data[i].POINTS > max) {
-        max = data[i].POINTS;
-        var maxplayer = data[i].SOLDIER;
-    }
-}
-	const channelawake = client.channels.get('460001047495049229');
-    console.log("SOLDIER WITH THE MOST POINTS: "+maxplayer);
-  channelawake.send("SOLDIER WITH THE MOST POINTS: "+maxplayer);
 
-   
 
-   
 
 
 
@@ -258,6 +248,134 @@ var obj = data;
 jsonfile.writeFile(file, obj, function (err) {
  // console.error(err)
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+
+if(dd<10) {
+    dd = '0'+dd
+} 
+
+if(mm<10) {
+    mm = '0'+mm
+} 
+
+today = mm + '/' + dd + '/' + yyyy;
+  console.log("THE DATE IS: " + today);
+
+
+
+
+
+var firstDay = new Date(today);
+var nextWeek = new Date(firstDay.getTime() + 8 * 24 * 60 * 60 * 1000);
+var nextWeekString = JSON.stringify(nextWeek);
+var res = nextWeekString.slice(1, -15);
+
+console.log("NEXT WEEKS DATE IS: " + res);
+
+
+
+
+
+
+
+
+
+ 
+
+
+    var first = 0;
+    var second = 0;
+    var third = 0;
+    var firstpl, secondpl, thirdpl;
+
+        for (var j = 0; j < data.length ; j++)
+        {
+            /* If current element is smaller than
+            first */
+            if (data[j].POINTS >= first)
+            {
+                third = second;
+                thirdpl = secondpl;
+
+                second = first;
+                secondpl = firstpl;
+                
+                first = data[j].POINTS;
+                firstpl = data[j].NAME;
+
+            }
+       
+            /* If arr[j] is in between first and
+            second then update second  */
+            else if (data[j].POINTS >= second)
+            {
+                third = second;
+                thirdpl = secondpl;
+
+                second = data[j].POINTS;
+                secondpl = data[j].NAME;
+
+            }
+       
+            else if (data[j].POINTS >= third)
+            {
+                third = data[j].POINTS;
+                thirdpl = data[j].NAME;
+
+            }
+
+        }
+    const channelawake2 = client.channels.get('460001047495049229');
+       
+        console.log("THIS WEEK'S WINNERS ARE: " + firstpl + " " + secondpl + " " + thirdpl);
+
+       channelawake2.send("Hey soldiers, we are proud to announce the winners of this week!\nCongratulations to; \n**" + firstpl + "\n" + secondpl + "\n" + thirdpl + "**");
+
+       channelawake2.send("The next date of choosing the 3 soldiers with best overall previous week activity is: **" + res + "** \nNicknames will be displayed down below.");
+      
+
+		// CHANNELLAR DEĞİŞECEK
+
+
+
+
+
+
+
+
+
+
+
+
+for(var i = 1; i <= data.length -1;i++) {
+     console.log(data[i].NAME);
+    console.log(data[i].RANK);
+    console.log("POINTS: " + data[i].POINTS);
+    console.log("----------------");
+
+    if (data[i].POINTS > max) {
+        max = data[i].POINTS;
+        var maxplayer = data[i].NAME;
+    }
+}
+   
 
 
 });
