@@ -187,7 +187,7 @@ var recmonday = schedule.scheduleJob('30 0 * * 1', function(){
 
 
 
-var weeklyevent = schedule.scheduleJob('38 8 * * 1', function(){
+var weeklyevent = schedule.scheduleJob('0 10 * * 1', function(){ // 1 OLAN DEĞER PAZAR (0 VEYA 7) YAPILACAK
 
 
 var XLSX = require('xlsx');
@@ -283,7 +283,7 @@ today = mm + '/' + dd + '/' + yyyy;
 
 
 var firstDay = new Date(today);
-var nextWeek = new Date(firstDay.getTime() + 7 * 24 * 60 * 60 * 1000);
+var nextWeek = new Date(firstDay.getTime() + 6 * 24 * 60 * 60 * 1000); // 6 OLAN DEĞER TEKRAR 7 YAPILACAK
 var nextWeekString = JSON.stringify(nextWeek);
 var res = nextWeekString.slice(1, -15);
 
@@ -342,17 +342,18 @@ console.log("NEXT WEEKS DATE IS: " + res);
             }
 
         }
-    const channelawake2 = client.channels.get('460001047495049229');
+    const channelwe = client.channels.get('472709686051995651');
        
         console.log("THIS WEEK'S WINNERS ARE: " + firstpl + " " + secondpl + " " + thirdpl);
 
-       channelawake2.send("Hey soldiers, we are proud to announce the winners of this week!\nCongratulations to; \n**" + firstpl + "\n" + secondpl + "\n" + thirdpl + "**");
+	
+	
+       channelwe.send("Hey soldiers, we are proud to announce the winners of this week!\nCongratulations to; \n**" + firstpl + "\n" + secondpl + "\n" + thirdpl + "**");
 
-       channelawake2.send("The next date of choosing the 3 soldiers with best overall previous week activity is: \n**" + res + "** \nNicknames will be displayed down below.");
+       channelwe.send("The next date of choosing the 3 soldiers with best overall previous week activity is: \n**" + res + "** \nNicknames will be displayed down below.");
       
 
-		// CHANNELLAR DEĞİŞECEK
-
+	
 
 
 
