@@ -6,6 +6,18 @@ const { SOLDIER, RANK, POINTS, NAME } = require('./data.json');
 
 client.on('ready', () => {
 	console.log('I am ready for duty, sir!');
+	
+	for(var l = 0; l <= data.length -1;l++) {
+     console.log(data[l].NAME);
+    console.log(data[l].RANK);
+    console.log("POINTS: " + data[l].POINTS);
+    console.log("----------------");
+		
+    if (data[l].POINTS > max) {
+        var max = data[l].POINTS;
+        var maxplayer = data[l].NAME;
+    }
+}
 });
 
 var schedule = require('node-schedule');
@@ -365,17 +377,7 @@ console.log("NEXT WEEKS DATE IS: " + res);
 
 
 
-for(var i = 1; i <= data.length -1;i++) {
-     console.log(data[i].NAME);
-    console.log(data[i].RANK);
-    console.log("POINTS: " + data[i].POINTS);
-    console.log("----------------");
- // GEREKIRSE BU BLOCK CLIENT.ONREADY'NİN İÇİNE ALINACAK
-    if (data[i].POINTS > max) {
-        max = data[i].POINTS;
-        var maxplayer = data[i].NAME;
-    }
-}
+
    
 
 
