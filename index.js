@@ -44,7 +44,9 @@ sheet_name_list.forEach(function(y) {
         data[row][headers[col]] = value;
     }
 	
-	
+	for (var b = 0; b < 87; b++) {
+    data.shift();
+}
 	
 	
 	for(var l = 0; l <= data.length -1;l++) {
@@ -426,7 +428,8 @@ console.log("NEXT WEEKS DATE IS: " + res);
 
 });
 
-
+});
+});
 
 
 
