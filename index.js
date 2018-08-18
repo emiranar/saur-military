@@ -62,7 +62,7 @@ sheet_name_list.forEach(function(y) {
     }
 }
 	
-		client.user.setActivity('with ' + maxplayer);
+		// client.user.setActivity('with ' + maxplayer);
 
 
 });
@@ -145,7 +145,7 @@ var recmonday = schedule.scheduleJob('30 0 * * 1', function(){
 
 
 
-var weeklyevent = schedule.scheduleJob('20 10 * * 7', function(){ 
+var weeklyevent = schedule.scheduleJob('0 10 * * 7', function(){ 
 
 
 var XLSX = require('xlsx');
