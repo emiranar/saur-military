@@ -23,6 +23,7 @@ con.connect(function(err) {
   con.query("SELECT * FROM main", function (err, result, fields) {
     if (err) throw err;
     client.user.setActivity('with ' + result[0].winner);
+	  recday = result[0].recday;
 	  con.end();
   });
 });
@@ -85,27 +86,13 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 
 
-var mysql = require('mysql');
 
-var con = mysql.createConnection({
-  host: process.env.dbhost,
-  user: process.env.dbuser,
-  password: process.env.dbpass,
-  database: process.env.db
-});
 
-con.connect(function(err) {
-  if (err) throw err;
-  con.query("SELECT * FROM main", function (err, result, fields) {
-    if (err) throw err;
-    var recday = result[0].recday;
-	  con.end();
-  });
-  });
+
 
 	
 	
-	var rectest = schedule.scheduleJob('30 19 * * '+ recday +'', function(){
+	var rectest = schedule.scheduleJob('33 19 * * '+ recday +'', function(){
   console.log('It is working!');
 });
 
