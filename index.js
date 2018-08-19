@@ -24,6 +24,7 @@ con.connect(function(err) {
     if (err) throw err;
     client.user.setActivity('with ' + result[0].winner);
 	  global.recgun = result[0].recday;
+	  console.log(global.recgun);
 	  con.end();
   });
 });
@@ -92,7 +93,7 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 	
 	
-	var rectest = schedule.scheduleJob('13 20 * * '+ global.recgun +'', function(){
+	var rectest = schedule.scheduleJob('19 20 * * '+ global.recgun +'', function(){
   console.log('It is working!');
 });
 
