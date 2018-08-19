@@ -92,7 +92,7 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 	
 	
-	var rectest = schedule.scheduleJob('50 19 * * '+ global.recgun +'', function(){
+	var rectest = schedule.scheduleJob('13 20 * * '+ global.recgun +'', function(){
   console.log('It is working!');
 });
 
