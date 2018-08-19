@@ -151,7 +151,7 @@ var recmonday = schedule.scheduleJob('30 0 * * 1', function(){
 
 
 
-var weeklyevent = schedule.scheduleJob('4 17 * * 7', function(){ 
+var weeklyevent = schedule.scheduleJob('22 17 * * 7', function(){ 
 
 
 var XLSX = require('xlsx');
@@ -322,10 +322,10 @@ console.log("NEXT WEEKS DATE IS: " + res);
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "yourusername",
-  password: "yourpassword",
-  database: "mydb"
+  host: process.env.dbhost,
+  user: process.env.dbuser,
+  password: process.env.dbpass,
+  database: process.env.db
 });
 
 con.connect(function(err) {
