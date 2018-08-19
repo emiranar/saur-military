@@ -86,6 +86,11 @@ sheet_name_list.forEach(function(y) {
     if (err) throw err;
     console.log("1 record inserted");
 	});
+		
+		con.end();
+
+
+		
 	});
 
 	
