@@ -74,6 +74,45 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: process.env.dbhost,
+  user: process.env.dbuser,
+  password: process.env.dbpass,
+  database: process.env.db
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  con.query("SELECT * FROM main", function (err, result, fields) {
+    if (err) throw err;
+    var recday = result[0].winner;
+	  con.end();
+  });
+	
+	
+	
+	var rectest = schedule.scheduleJob('18 19 * * '+ recday +'', function(){
+  console.log('I am awake, sir!');
+});
+
+	
+	
+	
+	
+
 var recawake = schedule.scheduleJob('15 0 * * '+ config.recday +'', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('I am awake, sir!');
