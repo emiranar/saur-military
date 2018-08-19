@@ -81,7 +81,7 @@ sheet_name_list.forEach(function(y) {
 	con.connect(function(err) {
 	  if (err) throw err;
 	  console.log("Connected!");
-		var sql = "'UPDATE main SET winner = 'MJR-Fenix'";
+		var sql = "'UPDATE main SET winner = 'MJR-Fenix' WHERE recday = '6' OR recday = '7'";
   con.query(sql, function (err, result) {
     if (err) throw err;
     console.log(result.affectedRows + " record(s) updated");
