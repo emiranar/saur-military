@@ -358,6 +358,6 @@ console.log("NEXT WEEKS DATE IS: " + res);
 });
 });
 
-
+});
 
 client.login(process.env.BOT_TOKEN);
