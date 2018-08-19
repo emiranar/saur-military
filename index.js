@@ -72,10 +72,10 @@ sheet_name_list.forEach(function(y) {
 		var mysql = require('mysql');
 
 	var con = mysql.createConnection({
-	  host: "eu-cdbr-west-02.cleardb.net",
-	  user: "bf875e4a4119a9",
-	  password: "f01b59d6",
-	  database: "heroku_4543f3227281669"
+	  host: process.env.dbhost,
+	  user: process.env.dbuser,
+	  password: process.env.dbpass,
+	  database:  process.env.db
 	});
 
 	con.connect(function(err) {
