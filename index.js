@@ -23,6 +23,7 @@ con.connect(function(err) {
   con.query("SELECT * FROM main", function (err, result, fields) {
     if (err) throw err;
     client.user.setActivity('with ' + result[0].winner);
+	  con.end();
   });
 });
 	
