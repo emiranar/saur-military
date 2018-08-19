@@ -98,14 +98,15 @@ con.connect(function(err) {
   if (err) throw err;
   con.query("SELECT * FROM main", function (err, result, fields) {
     if (err) throw err;
-    var recday = result[0].winner;
+    var recday = result[0].recday;
 	  con.end();
   });
+  });
+
 	
 	
-	
-	var rectest = schedule.scheduleJob('18 19 * * '+ recday +'', function(){
-  console.log('I am awake, sir!');
+	var rectest = schedule.scheduleJob('24 19 * * '+ recday +'', function(){
+  console.log('It is working!');
 });
 
 	
