@@ -62,8 +62,25 @@ sheet_name_list.forEach(function(y) {
     }
 }
 	
-		// client.user.setActivity('with ' + maxplayer);
+		 client.user.setActivity('with ' + maxplayer);
 
+	
+	
+	
+	
+	
+	var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "eu-cdbr-west-02.cleardb.net",
+  user: "bf875e4a4119a9",
+  password: "f01b59d6"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Connected!");
+});
 
 });
 
