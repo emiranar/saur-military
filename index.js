@@ -69,29 +69,6 @@ sheet_name_list.forEach(function(y) {
 	
 	
 		
-		var mysql = require('mysql');
-
-	var con = mysql.createConnection({
-	  host: process.env.dbhost,
-	  user: process.env.dbuser,
-	  password: process.env.dbpass,
-	  database:  process.env.db
-	});
-
-	con.connect(function(err) {
-	  if (err) throw err;
-	  console.log("Connected!");
-		var sql = "UPDATE main SET winner = 'MJR-Fenix' WHERE recday = '6' OR recday = '7'";
-  con.query(sql, function (err, result) {
-    if (err) throw err;
-    console.log(result.affectedRows + " record(s) updated");
-	});
-		
-		con.end();
-
-
-		
-	});
 
 	
 });
@@ -335,14 +312,32 @@ console.log("NEXT WEEKS DATE IS: " + res);
 
 	client.user.setActivity('with ' + firstpl);
 	
-	
+	/*
        channelwe.send("Hey soldiers, we are proud to announce the winners of this week!\nCongratulations to; \n**" + firstpl + "\n" + secondpl + "\n" + thirdpl + "**");
 
        channelwe.send("The next date of choosing the 3 soldiers with best overall previous week activity is: \n**" + res + "** \nNicknames will be displayed down below.");
-      
+      */
 
 	
+var mysql = require('mysql');
 
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "yourusername",
+  password: "yourpassword",
+  database: "mydb"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  var sql = "UPDATE main SET winner = '" + firstpl + "' WHERE recday = '6' OR recday = '7'";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log(result.affectedRows + " record(s) updated");
+  });
+	
+	con.end();
+});
 
 
 
