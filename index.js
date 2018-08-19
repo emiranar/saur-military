@@ -9,7 +9,22 @@ client.on('ready', () => {
 	
 	
 	
-	
+	var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: process.env.dbhost,
+  user: process.env.dbuser,
+  password: process.env.dbpass,
+  database: process.env.db
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  con.query("SELECT * FROM main", function (err, result, fields) {
+    if (err) throw err;
+    console.log(result[0].winner);
+  });
+});
 	
 	
 	
@@ -151,7 +166,7 @@ var recmonday = schedule.scheduleJob('30 0 * * 1', function(){
 
 
 
-var weeklyevent = schedule.scheduleJob('22 17 * * 7', function(){ 
+var weeklyevent = schedule.scheduleJob('0 10 * * 7', function(){ 
 
 
 var XLSX = require('xlsx');
