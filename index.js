@@ -339,7 +339,7 @@ con.connect(function(err) {
 });
 
 
-});
+
 
 
 client.login(process.env.BOT_TOKEN);
