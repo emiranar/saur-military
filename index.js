@@ -86,6 +86,7 @@ sheet_name_list.forEach(function(y) {
     if (err) throw err;
     console.log(result.affectedRows + " record(s) updated");
 	});
+	});
 		
 		con.end();
 
