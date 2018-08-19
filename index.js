@@ -81,12 +81,13 @@ sheet_name_list.forEach(function(y) {
 	con.connect(function(err) {
 	  if (err) throw err;
 	  console.log("Connected!");
-		var sql = "CREATE TABLE main (winner VARCHAR(255), recday VARCHAR(255))";
+		var sql = "INSERT INTO main (winner, recday) VALUES ('SGT-Aerion', '7')";
   con.query(sql, function (err, result) {
     if (err) throw err;
-    console.log("Table created");
+    console.log("1 record inserted");
 	});
-	
+	});
+
 	
 });
 
@@ -358,6 +359,5 @@ console.log("NEXT WEEKS DATE IS: " + res);
 });
 });
 
-});
 
 client.login(process.env.BOT_TOKEN);
