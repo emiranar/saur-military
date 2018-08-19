@@ -23,8 +23,8 @@ con.connect(function(err) {
   con.query("SELECT * FROM main", function (err, result, fields) {
     if (err) throw err;
     client.user.setActivity('with ' + result[0].winner);
-	  global.recgun = result[0].recday;
-	  console.log(global.recgun);
+	//  global.recgun = result[0].recday;
+	//  console.log(global.recgun);
 	  con.end();
   });
 });
@@ -91,13 +91,13 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 
 
-	
+/*	
 	
 	var rectest = schedule.scheduleJob('19 20 * * '+ global.recgun +'', function(){
   console.log('It is working!');
 });
 
-	
+*/	
 	
 	
 	
