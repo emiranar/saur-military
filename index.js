@@ -68,20 +68,25 @@ sheet_name_list.forEach(function(y) {
 	
 	
 	
-		/*
+		
 		var mysql = require('mysql');
 
 	var con = mysql.createConnection({
 	  host: "eu-cdbr-west-02.cleardb.net",
 	  user: "bf875e4a4119a9",
-	  password: "f01b59d6"
+	  password: "f01b59d6",
+	  database: "heroku_4543f3227281669"
 	});
 
 	con.connect(function(err) {
 	  if (err) throw err;
 	  console.log("Connected!");
+		var sql = "CREATE TABLE main (winner VARCHAR(255), recday VARCHAR(255))";
+  con.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("Table created");
 	});
-	*/
+	
 	
 });
 
