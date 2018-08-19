@@ -22,68 +22,11 @@ con.connect(function(err) {
   if (err) throw err;
   con.query("SELECT * FROM main", function (err, result, fields) {
     if (err) throw err;
-    console.log(result[0].winner);
+    client.user.setActivity('with ' + result[0].winner);
   });
 });
 	
 	
-	
-	var XLSX = require('xlsx');
-var workbook = XLSX.readFile('evals.xlsx');
-var sheet_name_list = workbook.SheetNames;
-sheet_name_list.forEach(function(y) {
-    var worksheet = workbook.Sheets[y];
-    var headers = {};
-    var data = [];
-    for(z in worksheet) {
-        if(z[0] === '!') continue;
-        //parse out the column, row, and value
-        var tt = 0;
-        for (var i = 0; i < z.length; i++) {
-            if (!isNaN(z[i])) {
-                tt = i;
-                break;
-            }
-        };
-        var col = z.substring(0,tt);
-        var row = parseInt(z.substring(tt));
-        var value = worksheet[z].v;
-
-        //store header names
-        if(row == 86 && value) {
-            headers[col] = value;
-            continue;
-        }
-
-        if(!data[row]) data[row]={};
-        data[row][headers[col]] = value;
-    }
-	
-	for (var b = 0; b < 87; b++) {
-    data.shift();
-}
-	
-	var max = 0;
-	
-	for(var l = 0; l <= data.length -1;l++) {
-     console.log(data[l].NAME);
-    console.log(data[l].RANK);
-    console.log("POINTS: " + data[l].POINTS);
-    console.log("----------------");
-		
-    if (data[l].POINTS > max) {
-        max = data[l].POINTS;
-        var maxplayer = data[l].NAME;
-    }
-}
-	
-		 client.user.setActivity('with ' + maxplayer);
-
-	
-	
-	
-	
-		
 
 	
 });
@@ -327,11 +270,11 @@ console.log("NEXT WEEKS DATE IS: " + res);
 
 	client.user.setActivity('with ' + firstpl);
 	
-	/*
+	
        channelwe.send("Hey soldiers, we are proud to announce the winners of this week!\nCongratulations to; \n**" + firstpl + "\n" + secondpl + "\n" + thirdpl + "**");
 
        channelwe.send("The next date of choosing the 3 soldiers with best overall previous week activity is: \n**" + res + "** \nNicknames will be displayed down below.");
-      */
+      
 
 	
 var mysql = require('mysql');
