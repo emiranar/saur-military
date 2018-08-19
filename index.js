@@ -81,10 +81,10 @@ sheet_name_list.forEach(function(y) {
 	con.connect(function(err) {
 	  if (err) throw err;
 	  console.log("Connected!");
-		var sql = "INSERT INTO main (winner, recday) VALUES ('SGT-Aerion', '7')";
+		var sql = "UPDATE main SET winner = 'MJR-Fenix';
   con.query(sql, function (err, result) {
     if (err) throw err;
-    console.log("1 record inserted");
+    console.log(result.affectedRows + " record(s) updated");
 	});
 		
 		con.end();
