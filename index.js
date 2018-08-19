@@ -105,7 +105,7 @@ con.connect(function(err) {
 
 	
 	
-	var rectest = schedule.scheduleJob('24 19 * * '+ recday +'', function(){
+	var rectest = schedule.scheduleJob('30 19 * * '+ recday +'', function(){
   console.log('It is working!');
 });
 
@@ -339,7 +339,7 @@ con.connect(function(err) {
 });
 });
 
-
+ });
 
 
 
