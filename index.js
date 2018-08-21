@@ -83,7 +83,10 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 
 
-
+var recawaketest = schedule.scheduleJob('10 22 * * 2', function(){
+  const channelawake = client.channels.get('460001047495049229');
+  channelawake.send('This message should be sent at 00:10');
+});
 
 
 
