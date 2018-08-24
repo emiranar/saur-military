@@ -83,10 +83,7 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 
 
-var recawaketest = schedule.scheduleJob('10 22 * * 2', function(){
-  const channelawake = client.channels.get('460001047495049229');
-  channelawake.send('This message should be sent at 00:10');
-});
+
 
 
 
@@ -105,25 +102,25 @@ var recawaketest = schedule.scheduleJob('10 22 * * 2', function(){
 	
 	
 
-var recawake = schedule.scheduleJob('15 0 * * '+ config.recday +'', function(){
+var recawake = schedule.scheduleJob('0 22 * * '+ config.recday +'', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('I am awake, sir!');
   console.log('I am awake, sir!');
 });
 
-var rec = schedule.scheduleJob('30 0 * * '+ config.recday +'', function(){
+var rec = schedule.scheduleJob('10 22 * * '+ config.recday +'', function(){
   const channelrec = client.channels.get('391219156391034890');
   channelrec.send('Today is recruitment day @everyone Wake up fellas!');
 });
 
 
-var recmondayawake = schedule.scheduleJob('15 0 * * 1', function(){
+var recmondayawake = schedule.scheduleJob('0 22 * * 7', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('I am awake, sir!');
   console.log('I am awake, sir!');
 });
 
-var recmonday = schedule.scheduleJob('30 0 * * 1', function(){
+var recmonday = schedule.scheduleJob('10 22 * * 7', function(){
   const channelrec = client.channels.get('391219156391034890');
   channelrec.send('Today is recruitment day @everyone Wake up fellas!');
 });
