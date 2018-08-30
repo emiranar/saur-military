@@ -138,7 +138,7 @@ var recmonday = schedule.scheduleJob('10 22 * * 7', function(){
 
 
 
-var weeklyevent = schedule.scheduleJob('10 10 * * 7', function(){ 
+var weeklyevent = schedule.scheduleJob('0 10 * * 7', function(){ 
 
 
 var XLSX = require('xlsx');
@@ -293,17 +293,22 @@ console.log("NEXT WEEKS DATE IS: " + res);
             }
 
         }
-    const channelwe = client.channels.get('472709686051995651');
+   
        
         console.log("THIS WEEK'S WINNERS ARE: " + firstpl + " " + secondpl + " " + thirdpl);
 
-	client.user.setActivity('with ' + firstpl);
 	
 	
-       channelwe.send("Hey soldiers, we are proud to announce the winners of this week!\nCongratulations to; \n**" + firstpl + "\n" + secondpl + "\n" + thirdpl + "**");
-
-       channelwe.send("The next date of choosing the 3 soldiers with best overall previous week activity is: \n**" + res + "** \nNicknames will be displayed down below.");
-      
+	if (firstpl == null || secondpl == null || thirdpl == null) {
+		const botchannel = client.channels.get('460001047495049229');
+    		botchannel.send("Houston, We Have a Problem!");
+	}
+	else {
+		client.user.setActivity('with ' + firstpl);
+		const channelwe = client.channels.get('472709686051995651');
+        	channelwe.send("Hey soldiers, we are proud to announce the winners of this week!\nCongratulations to; \n**" + firstpl + "\n" + secondpl + "\n" + thirdpl + "**");
+       		channelwe.send("The next date of choosing the 3 soldiers with best overall previous week activity is: \n**" + res + "** \nNicknames will be displayed down below.");
+	}
 
 	
 var mysql = require('mysql');
