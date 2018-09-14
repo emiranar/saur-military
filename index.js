@@ -213,8 +213,8 @@ sheet_name_list.forEach(function(y) {
         if(!data[row]) data[row]={};
         data[row][headers[col]] = value;
     }
-    //drop those first two rows which are empty
-for (var b = 0; b < 87; b++) {
+    //drop those rows which are empty
+for (var b = 0; b < 1006; b++) {
     data.shift();
 }
     
