@@ -28,6 +28,7 @@ con.connect(function(err) {
 	  con.end();
   });
 });
+
 	
 	
 
@@ -335,5 +336,35 @@ con.connect(function(err) {
  });
 
 
+
+
+
+client.on('message', message => {
+    if (!message.content.startsWith(prefix) || message.author.bot) return;
+
+    const args = message.content.slice(prefix.length).split(/ +/);
+    const command = args.shift().toLowerCase();
+
+    if (command === 'vote') {
+        if (!args.length) {
+            return message.channel.send(`You didn't provide a name, ${message.author}!`);
+        }
+
+        const voteEmbed = new Discord.RichEmbed()
+        var username = message.author.username
+        var avatar = message.author.avatarURL
+
+        voteEmbed.setColor('#008800')
+
+        voteEmbed.setAuthor(username, avatar, avatar)
+        voteEmbed.addField('Started a vote for', args[0])
+
+
+
+    message.channel.send({embed: voteEmbed}).then(embedMessage => {
+    embedMessage.react("✅").then(embedMessage.react("❌"))
+    });
+    }  
+});
 
 client.login(process.env.BOT_TOKEN);
