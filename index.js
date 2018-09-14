@@ -3,7 +3,7 @@ const client = new Discord.Client();
 const config = require('./config.json');
 
 
-const { SOLDIER, RANK, POINTS, NAME } = require('./data.json');
+const { SOLDIER, POINTS} = require('./data.json');
 
 
 client.on('ready', () => {
