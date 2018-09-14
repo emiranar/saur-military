@@ -30,7 +30,7 @@ client.on('message', message => {
         voteEmbed.setColor('#008800')
 
         voteEmbed.setAuthor(username, avatar, avatar)
-        voteEmbed.addField('Started a vote for', args[0])
+        voteEmbed.addField('Started a vote for', args.join(' '))
 
 
 
