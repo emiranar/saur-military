@@ -180,7 +180,7 @@ var recmonday = schedule.scheduleJob('10 23 * * 7', function(){
 
 
 
-var weeklyevent = schedule.scheduleJob('0 11 * * 7', function(){ 
+var weeklyevent = schedule.scheduleJob('0 11 * * 1', function(){ // 1 tekrar 7 yapılacak
 
 
 var XLSX = require('xlsx');
