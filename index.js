@@ -180,7 +180,7 @@ var recmonday = schedule.scheduleJob('10 23 * * 7', function(){
 
 
 
-var weeklyevent = schedule.scheduleJob('0 11 * * 1', function(){ // 1 tekrar 7 yapılacak
+var weeklyevent = schedule.scheduleJob('0 11 * * 1', function(){ // 1 tekrar 7 yapılacak ve 279. satırdaki 6 tekrar 7 yapılacak
 
 
 var XLSX = require('xlsx');
@@ -276,7 +276,7 @@ today = mm + '/' + dd + '/' + yyyy;
 
 
 var firstDay = new Date(today);
-var nextWeek = new Date(firstDay.getTime() + 7 * 24 * 60 * 60 * 1000); 
+var nextWeek = new Date(firstDay.getTime() + 6 * 24 * 60 * 60 * 1000); 
 var nextWeekString = JSON.stringify(nextWeek);
 var res = nextWeekString.slice(1, -15);
 
