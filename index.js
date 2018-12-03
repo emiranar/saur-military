@@ -100,7 +100,7 @@ var wzmpmewakeup = schedule.scheduleJob('30 18 * * *', function(){
   console.log('I am awake, sir!');
 });
 
-var wzmpme = schedule.scheduleJob('59 18 * * *', function(){
+var wzmpme = schedule.scheduleJob('45 18 * * *', function(){
   const channel = client.channels.get('331375646729306119');
 	var date = new Date();
 	var day = date.getDay();
