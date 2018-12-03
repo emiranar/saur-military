@@ -94,15 +94,23 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 
 
-var wzewakeup = schedule.scheduleJob('30 18 * * */2', function(){
+var wzmpmewakeup = schedule.scheduleJob('30 18 * * *', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('I am awake, sir!');
   console.log('I am awake, sir!');
 });
 
-var wze = schedule.scheduleJob('45 18 * * */2', function(){
+var wzmpme = schedule.scheduleJob('45 18 * * *', function(){
   const channel = client.channels.get('331375646729306119');
-channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
+	var date = new Date();
+	var day = date.getDay();
+	
+	if (day % 2 == 0) {
+		channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
+	}
+	else{
+		channel.send('Wake up and prepare your cuffs, It\'s patrolling time @everyone!');
+	}
 });
 
 
@@ -115,7 +123,16 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 
 
+var mpmsundaywakeup = schedule.scheduleJob('30 16 * * 0', function(){
+  const channelawake = client.channels.get('460001047495049229');
+  channelawake.send('I am awake, sir!');
+  console.log('I am awake, sir!');
+});
 
+var mpmsunday = schedule.scheduleJob('45 16 * * 0', function(){
+  const channel = client.channels.get('331375646729306119');
+  channel.send('Wake up and prepare your cuffs, It\'s patrolling time @everyone!');
+});
 
 
 
