@@ -150,45 +150,6 @@ var mpmsunday = schedule.scheduleJob('45 16 * * 0', function(){
 
 
 
-/*	
-	
-	var rectest = schedule.scheduleJob('19 20 * * '+ global.recgun +'', function(){
-  console.log('It is working!');
-});
-
-*/	
-	
-	
-	
-
-var recawake = schedule.scheduleJob('0 23 * * '+ config.recday +'', function(){
-  const channelawake = client.channels.get('460001047495049229');
-  channelawake.send('I am awake, sir!');
-  console.log('I am awake, sir!');
-});
-
-var rec = schedule.scheduleJob('10 23 * * '+ config.recday +'', function(){
-  const channelrec = client.channels.get('391219156391034890');
-  channelrec.send('Today is recruitment day @everyone Wake up fellas!');
-});
-
-
-var recmondayawake = schedule.scheduleJob('0 23 * * 7', function(){
-  const channelawake = client.channels.get('460001047495049229');
-  channelawake.send('I am awake, sir!');
-  console.log('I am awake, sir!');
-});
-
-var recmonday = schedule.scheduleJob('10 23 * * 7', function(){
-  const channelrec = client.channels.get('391219156391034890');
-  channelrec.send('Today is recruitment day @everyone Wake up fellas!');
-});
-
-
-
-
-
-
 
 
 
