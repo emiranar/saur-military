@@ -158,7 +158,7 @@ var mpmsunday = schedule.scheduleJob('45 16 * * 0', function(){
 
 
 
-var weeklyevent = schedule.scheduleJob('45 12 * * 7', function(){ 
+var weeklyevent = schedule.scheduleJob('0 9 * * 7', function(){ 
 
 
 var XLSX = require('xlsx');
