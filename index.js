@@ -192,7 +192,7 @@ sheet_name_list.forEach(function(y) {
         data[row][headers[col]] = value;
     }
     //drop those rows which are empty
-for (var b = 0; b < 1006; b++) {
+for (var b = 0; b < 1007; b++) {
     data.shift();
 }
     
