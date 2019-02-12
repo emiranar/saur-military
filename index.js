@@ -148,7 +148,11 @@ var mpmsunday = schedule.scheduleJob('45 16 * * 0', function(){
 
 
 
-
+var denemeyayini = schedule.scheduleJob('45 11 * * *', function(){
+  const channelawake = client.channels.get('460001047495049229');
+  channelawake.send('Deneme başarılı!');
+  console.log('I am awake, sir!');
+});
 
 
 
