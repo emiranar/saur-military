@@ -109,7 +109,7 @@ var wzmpme = schedule.scheduleJob('45 18 * * *', function(){
 		channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 	}
 	else{
-		channel.send('Wake up and prepare your cuffs, It\'s patrolling time @everyone!');
+		console.log('We miss MPM sir!'); // eski MPM yerine bir şey gelirse buraya yaz.
 	}
 });
 
