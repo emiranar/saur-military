@@ -123,16 +123,7 @@ var wzmpme = schedule.scheduleJob('45 18 * * *', function(){
 
 
 
-var mpmsundaywakeup = schedule.scheduleJob('30 16 * * 0', function(){
-  const channelawake = client.channels.get('460001047495049229');
-  channelawake.send('I am awake, sir!');
-  console.log('I am awake, sir!');
-});
 
-var mpmsunday = schedule.scheduleJob('45 16 * * 0', function(){
-  const channel = client.channels.get('331375646729306119');
-  channel.send('Wake up and prepare your cuffs, It\'s patrolling time @everyone!');
-});
 
 
 
