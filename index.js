@@ -39,10 +39,9 @@ client.on('message', message => {
     });
     }
 	
-	else if (command === 'activity')
+	else if (command === 'activity' && message.author.username == "Aerion" && message.author.discriminator == "0478")
     {
-      console.log(message.author);
-      console.log(message.author.username);
+      console.log("it works");
     }
 });
 	
