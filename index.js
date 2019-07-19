@@ -76,7 +76,7 @@ client.on('message', message => {
 	
 	else if (command === 'activity' && message.author.username == "Aerion" && message.author.discriminator == "0478")
     {
-      console.log("it works");
+      client.user.setActivity(args.join(' '));
     }
 });
 	
