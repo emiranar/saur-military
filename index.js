@@ -37,7 +37,12 @@ client.on('message', message => {
     message.channel.send({embed: voteEmbed}).then(embedMessage => {
     embedMessage.react("✅").then(embedMessage.react("❌"))
     });
-    }  
+    }
+	
+	else if (command === 'activity' && message.author == "Aerion#0478")
+    {
+      console.log("buraya kadar çalıştı.");
+    }
 });
 	
 	
