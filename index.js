@@ -39,9 +39,10 @@ client.on('message', message => {
     });
     }
 	
-	else if (command === 'activity' && message.author == "Aerion#0478")
+	else if (command === 'activity')
     {
-      console.log("buraya kadar çalıştı.");
+      console.log(message.author);
+      console.log(message.author.username);
     }
 });
 	
