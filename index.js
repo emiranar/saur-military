@@ -12,6 +12,41 @@ client.on('ready', () => {
 	
 	
 	
+	
+	
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: process.env.dbhost,
+  user: process.env.dbuser,
+  password: process.env.dbpass,
+  database: process.env.db
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  con.query("SELECT * FROM main", function (err, result, fields) {
+    if (err) throw err;
+    client.user.setActivity('with ' + result[0].winner);
+	//  global.recgun = result[0].recday;
+	//  console.log(global.recgun);
+	  con.end();
+  });
+});
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 client.on('message', message => {
     if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 
@@ -55,25 +90,7 @@ client.on('message', message => {
 	
 	
 	
-	var mysql = require('mysql');
 
-var con = mysql.createConnection({
-  host: process.env.dbhost,
-  user: process.env.dbuser,
-  password: process.env.dbpass,
-  database: process.env.db
-});
-
-con.connect(function(err) {
-  if (err) throw err;
-  con.query("SELECT * FROM main", function (err, result, fields) {
-    if (err) throw err;
-    client.user.setActivity('with ' + result[0].winner);
-	//  global.recgun = result[0].recday;
-	//  console.log(global.recgun);
-	  con.end();
-  });
-});
 
 	
 	
