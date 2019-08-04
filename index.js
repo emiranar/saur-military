@@ -35,7 +35,7 @@ con.connect(function(err) {
 });
 	
 	
-	
+	client.user.setActivity('Helix Way on Play Store'); // HELIX WAY
 	
 	
 	
