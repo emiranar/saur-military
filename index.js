@@ -28,6 +28,8 @@ con.connect(function(err) {
   con.query("SELECT * FROM main", function (err, result, fields) {
     if (err) throw err;
     client.user.setActivity('with ' + result[0].winner);
+	  
+	  client.user.setActivity('Helix Way on Play Store'); // HELIX WAY
 	//  global.recgun = result[0].recday;
 	//  console.log(global.recgun);
 	  con.end();
@@ -35,7 +37,7 @@ con.connect(function(err) {
 });
 	
 	
-	client.user.setActivity('Helix Way on Play Store'); // HELIX WAY
+	
 	
 	
 	
