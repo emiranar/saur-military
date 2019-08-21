@@ -29,7 +29,15 @@ con.connect(function(err) {
     if (err) throw err;
     client.user.setActivity('with ' + result[0].winner);
 	  
-	  client.user.setActivity('Helix Way on Play Store'); // HELIX WAY
+	
+	  
+	//  client.user.setActivity('Helix Way on Play Store'); 
+	  // HELIX WAY
+	  
+	  
+	  
+	  
+	  
 	//  global.recgun = result[0].recday;
 	//  console.log(global.recgun);
 	  con.end();
