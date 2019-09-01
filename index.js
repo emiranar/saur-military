@@ -185,7 +185,7 @@ var denemeyayini = schedule.scheduleJob('45 11 * * *', function(){
 
 
 
-var weeklyevent = schedule.scheduleJob('0 14 * * 7', function(){ 
+var weeklyevent = schedule.scheduleJob('5 14 * * 7', function(){ 
 
 
 var XLSX = require('xlsx');
