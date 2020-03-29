@@ -110,14 +110,14 @@ client.on('message', message => {
 
 var schedule = require('node-schedule');
 
-var wzmwakeup = schedule.scheduleJob('30 6 * * */2', function(){
+var wzmwakeup = schedule.scheduleJob('30 5 * * */2', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('I am awake, sir!');
   console.log('I am awake, sir!');
 	
 });
 
-var wzm = schedule.scheduleJob('45 6 * * */2', function(){
+var wzm = schedule.scheduleJob('45 5 * * */2', function(){
   const channel = client.channels.get('331375646729306119');
 channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 });
@@ -126,13 +126,13 @@ channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 
 
 
-var wzmpmewakeup = schedule.scheduleJob('30 18 * * *', function(){
+var wzmpmewakeup = schedule.scheduleJob('30 17 * * *', function(){
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('I am awake, sir!');
   console.log('I am awake, sir!');
 });
 
-var wzmpme = schedule.scheduleJob('45 18 * * *', function(){
+var wzmpme = schedule.scheduleJob('45 17 * * *', function(){
   const channel = client.channels.get('331375646729306119');
 	var date = new Date();
 	var day = date.getDay();
