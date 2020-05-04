@@ -110,16 +110,24 @@ client.on('message', message => {
 
 var schedule = require('node-schedule');
 
-var wzmwakeup = schedule.scheduleJob('30 5 * * */2', function(){
+var wzmwakeup = schedule.scheduleJob('30 5 * * *', function(){ // 30 5 * * */2
   const channelawake = client.channels.get('460001047495049229');
   channelawake.send('I am awake, sir!');
   console.log('I am awake, sir!');
 	
 });
 
-var wzm = schedule.scheduleJob('45 5 * * */2', function(){
-  const channel = client.channels.get('331375646729306119');
-channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
+var wzm = schedule.scheduleJob('45 5 * * *', function(){
+  const channel = client.channels.get('659680848161013760');
+var date = new Date();
+	var day = date.getDay();
+	
+	if (day % 2 == 0) {
+		channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
+	}
+	else{
+		channel.send('Wake up and prepare your weapons, It\'s Doomsday time @everyone!');
+	}
 });
 
 
@@ -133,7 +141,7 @@ var wzmpmewakeup = schedule.scheduleJob('30 17 * * *', function(){
 });
 
 var wzmpme = schedule.scheduleJob('45 17 * * *', function(){
-  const channel = client.channels.get('331375646729306119');
+  const channel = client.channels.get('659680848161013760');
 	var date = new Date();
 	var day = date.getDay();
 	
@@ -141,7 +149,7 @@ var wzmpme = schedule.scheduleJob('45 17 * * *', function(){
 		channel.send('Wake up and prepare your weapons, It\'s WZ time @everyone!');
 	}
 	else{
-		console.log('We miss MPM sir!'); // eski MPM yerine bir şey gelirse buraya yaz.
+		channel.send('Wake up and prepare your weapons, It\'s Doomsday time @everyone!');
 	}
 });
 
