@@ -31,7 +31,7 @@ con.connect(function(err) {
 	  
 	
 	  
-	  client.user.setActivity('SAUR'); 
+	  //client.user.setActivity('SAUR'); 
 	  
 	  
 	  
@@ -218,7 +218,7 @@ sheet_name_list.forEach(function(y) {
         var value = worksheet[z].v;
 
         //store header names
-        if(row == 1006 && value) {
+        if(row == 1013 && value) {
             headers[col] = value;
             continue;
         }
@@ -227,7 +227,7 @@ sheet_name_list.forEach(function(y) {
         data[row][headers[col]] = value;
     }
     //drop those rows which are empty
-for (var b = 0; b < 1007; b++) {
+for (var b = 0; b < 1014; b++) {
     data.shift();
 }
     
@@ -362,8 +362,8 @@ console.log("NEXT WEEKS DATE IS: " + res);
 		client.user.setActivity('with ' + firstpl);
 		const channelwe = client.channels.get('472709686051995651');
 		// DUYURU BURASI
-        	//channelwe.send("Hey soldiers, we are proud to announce the winners of this week!\nCongratulations to; \n**" + firstpl + "\n" + secondpl + "\n" + thirdpl + "**");
-       		//channelwe.send("The next date of choosing the 3 soldiers with best overall previous week activity is: \n**" + res + "** \nNicknames will be displayed down below.");
+        	channelwe.send("Hey soldiers, we are proud to announce the winners of this week!\nCongratulations to; \n**" + firstpl + "\n" + secondpl + "\n" + thirdpl + "**");
+       		channelwe.send("The next date of choosing the 3 soldiers with best overall previous week activity is: \n**" + res + "** \nNicknames will be displayed down below.");
 		
 	}
 
