@@ -193,7 +193,7 @@ var denemeyayini = schedule.scheduleJob('45 11 * * *', function(){
 
 
 
-var weeklyevent = schedule.scheduleJob('0 13 * * 7', function(){ // 0 12 -> 15:00
+var weeklyevent = schedule.scheduleJob('30 13 * * 7', function(){ // 0 12 -> 15:00
 
 
 var XLSX = require('xlsx');
