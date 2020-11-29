@@ -362,8 +362,8 @@ console.log("NEXT WEEKS DATE IS: " + res);
 		client.user.setActivity('with ' + firstpl);
 		const channelwe = client.channels.get('472709686051995651');
 		// DUYURU BURASI
-        	channelwe.send("Hey soldiers, we are proud to announce the winners of this week!\nCongratulations to; \n**" + firstpl + "\n" + secondpl + "\n" + thirdpl + "**");
-       		channelwe.send("The next date of choosing the 3 soldiers with best overall previous week activity is: \n**" + res + "** \nNicknames will be displayed down below.");
+        	//channelwe.send("Hey soldiers, we are proud to announce the winners of this week!\nCongratulations to; \n**" + firstpl + "\n" + secondpl + "\n" + thirdpl + "**");
+       		//channelwe.send("The next date of choosing the 3 soldiers with best overall previous week activity is: \n**" + res + "** \nNicknames will be displayed down below.");
 		
 	}
 
