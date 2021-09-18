@@ -27,7 +27,8 @@ con.connect(function(err) {
   if (err) throw err;
   con.query("SELECT * FROM main", function (err, result, fields) {
     if (err) throw err;
-    client.user.setActivity('with ' + result[0].winner);
+    client.user.setActivity('with Aerion');
+    //client.user.setActivity('with ' + result[0].winner);
 	  
 	
 	  
@@ -84,7 +85,7 @@ client.on('message', message => {
     });
     }
 	
-	else if (command === 'activity' && message.author.username == "Aerion" && message.author.discriminator == "0478")
+	else if (command === 'activity' && message.author.username == "Aerion" && message.author.discriminator == "1965")
     {
       client.user.setActivity(args.join(' '));
     }
@@ -359,7 +360,7 @@ console.log("NEXT WEEKS DATE IS: " + res);
     		botchannel.send("Houston, We Have a Problem!");
 	}
 	else {
-		client.user.setActivity('with ' + firstpl);
+		//client.user.setActivity('with ' + firstpl);
 		const channelwe = client.channels.get('472709686051995651');
 		// DUYURU BURASI
         	//channelwe.send("Hey soldiers, we are proud to announce the winners of this week!\nCongratulations to; \n**" + firstpl + "\n" + secondpl + "\n" + thirdpl + "**");
